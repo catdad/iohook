@@ -41,7 +41,7 @@ jobs:
       if: startsWith(matrix.os, 'ubuntu') != true
       run: |
         npm install
-        npm run build
+        npm run build -- --msvs_version=2019
         npm test
     - name: just install, no tests
       if: startsWith(matrix.os, 'ubuntu')
